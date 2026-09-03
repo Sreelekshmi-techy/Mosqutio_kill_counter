@@ -58,8 +58,8 @@ Observe the mosquito count through the Serial Monitor.
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="939" height="598" alt="simul damaged" src="https://github.com/user-attachments/assets/8020d3bb-a2f5-43ee-bd68-8171f8dd17bf" />
+
 
 ![Screenshot2](Add screenshot 2 here with proper name)
 *Add caption explaining what this shows*
