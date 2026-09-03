@@ -58,14 +58,14 @@ Observe the mosquito count through the Serial Monitor.
 For Software:
 
 # Screenshots (Add at least 3)
+screenshot of first tinkersimulation damaged 
 <img width="939" height="598" alt="simul damaged" src="https://github.com/user-attachments/assets/8020d3bb-a2f5-43ee-bd68-8171f8dd17bf" />
 
+orginal simulation image of mosquito kill counter
+<img width="1536" height="645" alt="tinkercad sim image" src="https://github.com/user-attachments/assets/c1cb622a-7e15-4937-90a4-024bfbff06a9" />
+schematic diagram of our work
+<img width="988" height="777" alt="schematic diagram" src="https://github.com/user-attachments/assets/395de8e7-db96-4866-8ae9-696eb291dbcf" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
