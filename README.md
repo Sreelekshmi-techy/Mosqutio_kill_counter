@@ -2,7 +2,7 @@
 
 
 
-# MOSQUITO KILL COUNTER 
+# ZAPGUARD 
 
 
 ## Basic Details
@@ -68,8 +68,36 @@ schematic diagram of our work
 
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+Workflow of our project
+
+Mosquito Activity
+↓
+Mosquito encounters the electric bat
+↓
+Zap Event Occurs
+An electrical zap represents a mosquito-control event
+↓
+Event Detection
+The system detects and registers the event
+↓
+Arduino Processing
+Arduino validates the event and updates the system data
+↓
+Real-Time Data Analysis
+Calculates activity and usage metrics
+↓
+Kill Count + Zap Rate + Activity Level
+Tracks total events, zaps per minute, and LOW/MEDIUM/HIGH activity
+↓
+Streak & Goal Tracking
+Maintains daily/monthly activity streaks and monitors daily targets
+↓
+Real-Time LCD Dashboard
+Displays the latest statistics in an easy-to-read format
+↓
+User Feedback & Insights
+Helps users understand mosquito activity and monitor mosquito-control effectiveness
+
 
 For Hardware:
 
