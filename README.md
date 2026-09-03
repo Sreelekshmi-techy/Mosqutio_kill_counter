@@ -33,18 +33,27 @@ For Software:
 -tool- tinkercad
 
 For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- Arduimo uno R3,potentiometer,breadboard,lcd, resistor,pushbutton
+Arduino Uno: ATmega328P, 5 V operating voltage, 14 digital I/O pins, 6 analog input pins.
+Breadboard: Solderless board for temporary circuit connections.
+Potentiometer: 10 kΩ, adjustable resistance, used to simulate varying input signals.
+LDR (Photoresistor): Light-dependent variable resistor, used for light sensing.
+Fixed Resistor: Typically 10 kΩ, used for voltage division and current control.
+Jumper Wires: Used to connect all components.
+
+- tools-tinkercad
 
 ### Implementation
 For Software:
 # Installation
-[commands]
+ tinkercad circuits generally runs in a browser
 
 # Run
-[commands]
-
+Open the project in Tinkercad Circuits.
+Open the Arduino code.
+Click Start Simulation.
+Adjust the input components to simulate detection signals.
+Observe the mosquito count through the Serial Monitor.
 ### Project Documentation
 For Software:
 
