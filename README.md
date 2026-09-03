@@ -2,34 +2,35 @@
 
 
 
-# [Project Name] 🎯
+# MOSQUITO KILL COUNTER 
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: SIDE FX
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+BHAVYA A GANESH
+SREELEKSHMI R
 
 ### Project Description
-[2-3 lines about what your project does]
 
-### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Mosquito Kill Counter is a smart system that counts the number of mosquitoes killed using a mosquito bat. Each detected mosquito-kill event updates the counter, allowing users to track their totally unnecessary but strangely satisfying mosquito-killing statistics.
 
-### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+### The Problem 
+When using an electric mosquito bat, there is no convenient way to automatically track how many mosquitoes have been killed. Counting them manually is impractical, and the user has no record of the number of successful kills.
+
+### The Solution 
+Our Mosquito Kill Counter simulation provides a system for detecting a mosquito-kill event and automatically increasing the kill count. The simulated circuit sends the detected event to the software system, where the updated count can be displayed on a website in real time.
+
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+-language - C programming
+ framework
+ libraries
+-tool- tinkercad
 
 For Hardware:
 - [List main components]
