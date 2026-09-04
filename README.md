@@ -27,9 +27,7 @@ Our Mosquito Kill Counter simulation provides a system for detecting a mosquito-
 ## Technical Details
 ### Technologies/Components Used
 For Software:
--language - C programming
- framework
- libraries
+-language - C programming,html,css,javascript
 -tool- tinkercad
 
 For Hardware:
@@ -65,6 +63,20 @@ orginal simulation image of mosquito kill counter
 <img width="1536" height="645" alt="tinkercad sim image" src="https://github.com/user-attachments/assets/c1cb622a-7e15-4937-90a4-024bfbff06a9" />
 schematic diagram of our work
 <img width="988" height="777" alt="schematic diagram" src="https://github.com/user-attachments/assets/395de8e7-db96-4866-8ae9-696eb291dbcf" />
+
+WEBSITE
+zapguard dashboard
+image of website dashboard
+<img width="1806" height="857" alt="Screenshot 2026-09-04 050747" src="https://github.com/user-attachments/assets/4bc90cb0-f6cc-48db-a0f5-4693b51d82d2" />
+image of website map 
+<img width="1790" height="915" alt="Screenshot 2026-09-04 050808" src="https://github.com/user-attachments/assets/53027448-7c16-46bc-a20d-687a6782a690" />
+image of activity history
+<img width="1655" height="898" alt="Screenshot 2026-09-04 050822" src="https://github.com/user-attachments/assets/239d485d-decd-4bed-b07b-fd95240279cd" />
+image of totalworkflow
+<img width="1853" height="855" alt="Screenshot 2026-09-04 050904" src="https://github.com/user-attachments/assets/260b7147-d339-4a7c-956c-fac9dd8ecedb" />
+
+
+
 
 
 # Diagrams
