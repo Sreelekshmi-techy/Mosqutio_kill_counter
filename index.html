@@ -1,1 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>ZAPGUARD | Smart Mosquito Monitoring</title>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">⚡</div>
+
+            <div class="logo-text">
+                <h1>ZAPGUARD</h1>
+                <span>SMART MONITORING</span>
+            </div>
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav>
+
+            <button class="nav-item active" data-page="dashboard">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Dashboard</span>
+            </button>
+
+            <button class="nav-item" data-page="map">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Risk Map</span>
+            </button>
+
+            <button class="nav-item" data-page="history">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>History</span>
+            </button>
+
+            <button class="nav-item" data-page="about">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>About System</span>
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                System Online
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h2 id="page-title">Dashboard</h2>
+                <p>Monitor mosquito activity in real time</p>
+            </div>
+
+            <div class="live-status">
+                <span class="live-dot"></span>
+                LIVE
+            </div>
+
+        </header>
+
+
+        <!-- ============================================= -->
+        <!-- DASHBOARD PAGE -->
+        <!-- ============================================= -->
+
+        <section id="dashboard" class="page active-page">
+
+            <!-- Statistics Cards -->
+
+            <div class="stats-grid">
+
+
+                <!-- Total Kills -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon mosquito">
+                        🦟
+                    </div>
+
+                    <div>
+                        <p>Total Kills</p>
+                        <h3 id="kill-count">127</h3>
+                    </div>
+
+                    <span class="trend positive">
+                        +12 today
+                    </span>
+
+                </div>
+
+
+                <!-- Zap Rate -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon zap">
+                        ⚡
+                    </div>
+
+                    <div>
+                        <p>Zap Rate</p>
+                        <h3 id="zap-rate">8/min</h3>
+                    </div>
+
+                    <span class="trend positive">
+                        Active
+                    </span>
+
+                </div>
+
+
+                <!-- Activity Level -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon activity">
+                        🔥
+                    </div>
+
+                    <div>
+                        <p>Activity Level</p>
+                        <h3 id="activity-level">HIGH</h3>
+                    </div>
+
+                    <span class="trend warning">
+                        Elevated
+                    </span>
+
+                </div>
+
+
+                <!-- Daily Goal -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon goal">
+                        🎯
+                    </div>
+
+                    <div>
+                        <p>Daily Goal</p>
+
+                        <h3>
+                            <span id="goal-current">127</span>/150
+                        </h3>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div id="goal-progress" class="progress"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- GRAPH + RECENT ACTIVITY -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- Activity Graph -->
+
+                <div class="panel graph-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h3>⚡ ZAP ACTIVITY</h3>
+                            <p>Today's mosquito activity</p>
+                        </div>
+
+                        <span class="demo-label">
+                            DEMO DATA
+                        </span>
+
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="activityChart"></canvas>
+                    </div>
+
+                </div>
+
+
+                <!-- Recent Activity -->
+
+                <div class="panel recent-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h3>RECENT ACTIVITY</h3>
+                            <p>Latest zap events</p>
+                        </div>
+
+                    </div>
+
+
+                    <div id="recent-list" class="recent-list">
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon">⚡</div>
+
+                            <div>
+                                <strong>Mosquito detected</strong>
+                                <p>Just now</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon">🦟</div>
+
+                            <div>
+                                <strong>High activity detected</strong>
+                                <p>2 minutes ago</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon">⚡</div>
+
+                            <div>
+                                <strong>Zap event recorded</strong>
+                                <p>5 minutes ago</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Smart Insight -->
+
+            <div class="insight-panel">
+
+                <div>
+
+                    <span class="insight-icon">🧠</span>
+
+                    <div>
+
+                        <h3>Smart Activity Insight</h3>
+
+                        <p id="insight-text">
+                            Mosquito activity is currently high.
+                            Peak activity is expected during evening hours.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Demo Button -->
+
+                <button id="simulate-zap">
+                    ⚡ Simulate Zap
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================================= -->
+        <!-- RISK MAP PAGE -->
+        <!-- ============================================= -->
+
+        <section id="map" class="page">
+
+            <div class="section-title">
+
+                <h2>Mosquito Risk Map</h2>
+
+                <p>
+                    Prototype visualization based on simulated activity data.
+                </p>
+
+            </div>
+
+
+            <div class="map-layout">
+
+
+                <!-- Demo Map -->
+
+                <div class="demo-map">
+
+
+                    <div class="zone low" data-zone="A">
+
+                        <span>Zone A</span>
+                        <small>LOW</small>
+
+                    </div>
+
+
+                    <div class="zone moderate" data-zone="B">
+
+                        <span>Zone B</span>
+                        <small>MODERATE</small>
+
+                    </div>
+
+
+                    <div class="zone high" data-zone="C">
+
+                        <span>Zone C</span>
+                        <small>HIGH</small>
+
+                    </div>
+
+
+                    <div class="zone low zone-d" data-zone="D">
+
+                        <span>Zone D</span>
+                        <small>LOW</small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Zone Information -->
+
+                <div class="zone-info panel">
+
+                    <h3 id="zone-name">
+                        Zone C
+                    </h3>
+
+
+                    <div class="zone-status">
+
+                        <span id="zone-status">
+                            🔴 HIGH ACTIVITY
+                        </span>
+
+                    </div>
+
+
+                    <div class="zone-data">
+
+                        <div>
+
+                            <span>Total Zaps</span>
+
+                            <strong id="zone-zaps">
+                                38
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>Risk Level</span>
+
+                            <strong id="zone-risk">
+                                Elevated
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>Peak Time</span>
+
+                            <strong id="zone-time">
+                                7:30 PM
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="prototype-note">
+                        ⚠ Prototype / Demo Data
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================================= -->
+        <!-- HISTORY PAGE -->
+        <!-- ============================================= -->
+
+        <section id="history" class="page">
+
+            <div class="section-title">
+
+                <h2>Activity History</h2>
+
+                <p>
+                    Historical mosquito activity data.
+                </p>
+
+            </div>
+
+
+            <div class="history-panel panel">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Date</th>
+                            <th>Total Kills</th>
+                            <th>Peak Rate</th>
+                            <th>Activity</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <tr>
+
+                            <td>Sep 04</td>
+                            <td>127</td>
+                            <td>11/min</td>
+
+                            <td>
+                                <span class="badge high-badge">
+                                    HIGH
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>Sep 03</td>
+                            <td>94</td>
+                            <td>8/min</td>
+
+                            <td>
+                                <span class="badge moderate-badge">
+                                    MODERATE
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>Sep 02</td>
+                            <td>116</td>
+                            <td>10/min</td>
+
+                            <td>
+                                <span class="badge high-badge">
+                                    HIGH
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================================= -->
+        <!-- ABOUT SYSTEM PAGE -->
+        <!-- ============================================= -->
+
+        <section id="about" class="page">
+
+            <div class="section-title">
+
+                <h2>How ZAPGUARD Works</h2>
+
+                <p>
+                    Transforming mosquito-control events into useful activity insights.
+                </p>
+
+            </div>
+
+
+            <!-- System Flow -->
+
+            <div class="system-flow">
+
+
+                <div class="flow-card">
+
+                    <div class="flow-icon">🦟</div>
+
+                    <h3>Mosquito</h3>
+
+                    <p>
+                        A mosquito comes into contact with the electric bat.
+                    </p>
+
+                </div>
+
+
+                <div class="flow-arrow">→</div>
+
+
+                <div class="flow-card">
+
+                    <div class="flow-icon">⚡</div>
+
+                    <h3>Zap Event</h3>
+
+                    <p>
+                        The electric bat generates an electrical event.
+                    </p>
+
+                </div>
+
+
+                <div class="flow-arrow">→</div>
+
+
+                <div class="flow-card">
+
+                    <div class="flow-icon">🔌</div>
+
+                    <h3>Detection</h3>
+
+                    <p>
+                        An embedded system detects and processes the event.
+                    </p>
+
+                </div>
+
+
+                <div class="flow-arrow">→</div>
+
+
+                <div class="flow-card">
+
+                    <div class="flow-icon">📊</div>
+
+                    <h3>Analytics</h3>
+
+                    <p>
+                        ZAPGUARD transforms events into activity insights.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Technology -->
+
+            <div class="technology-panel panel">
+
+                <h3>Technology Concept</h3>
+
+
+                <div class="tech-grid">
+
+
+                    <div>
+                        <span>⚡</span>
+                        Electric Bat
+                    </div>
+
+
+                    <div>
+                        <span>🔌</span>
+                        Embedded Detection
+                    </div>
+
+
+                    <div>
+                        <span>📡</span>
+                        Event Data
+                    </div>
+
+
+                    <div>
+                        <span>📊</span>
+                        Web Analytics
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<!-- Main JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
