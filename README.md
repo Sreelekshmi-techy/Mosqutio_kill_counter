@@ -21,7 +21,7 @@ Mosquito Kill Counter is a smart system that counts the number of mosquitoes kil
 When using an electric mosquito bat, there is no convenient way to automatically track how many mosquitoes have been killed. Counting them manually is impractical, and the user has no record of the number of successful kills.
 
 ### The Solution 
-Our Mosquito Kill Counter simulation provides a system for detecting a mosquito-kill event and automatically increasing the kill count. The simulated circuit sends the detected event to the software system, where the updated count can be displayed on a website in real time.
+Our Mosquito Kill Counter simulation provides a system for detecting a mosquito-kill event and automatically increasing the kill count. The simulated circuit sends the detected event to the software system, where the updated count can be displayed on a website in real time.ZapGuard is a smart mosquito-zap monitoring system that detects and counts mosquito-killing events using an Arduino-based prototype. The system processes zap activity and displays kill counts, activity levels, and goal tracking through a web dashboard. The website also provides map-based visualization of mosquito activity hotspots. In future deployment, Wi-Fi and ThingSpeak will enable cloud-based data transmission, real-time monitoring, and advanced analytics.
 
 
 ## Technical Details
@@ -110,6 +110,19 @@ Displays the latest statistics in an easy-to-read format
 User Feedback & Insights
 Helps users understand mosquito activity and monitor mosquito-control effectiveness
 
+WORKFLOW OF OUR WEBSITE
+
+Zap Event  
+↓  
+Mosquito Activity Data  
+↓  
+ZAPGUARD Dashboard  
+↓  
+Total Kills → Zap Rate → Activity Level → Daily Goal  
+↓  
+Activity Graph → Activity History → Risk Map  
+↓  
+Mosquito Activity Insights
 
 For Hardware:
 
