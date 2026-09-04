@@ -52,6 +52,8 @@ Open the Arduino code.
 Click Start Simulation.
 Adjust the input components to simulate detection signals.
 Observe the mosquito count through the Serial Monitor.
+https://www.tinkercad.com/things/cxs2XghqpqB/editel?sharecode=zXjn3wVW9Ko6N53IJGdMHJKvEoeEzrdhFFb7jRNyEXE
+
 ### Project Documentation
 For Software:
 
@@ -145,8 +147,9 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+https://drive.google.com/drive/folders/1DCFxG07QKixr9Z0qdYbKlBOktzNrUUy_
+
+
 
 # Additional Demos
 [Add any extra demo materials/links]
@@ -159,7 +162,7 @@ For Hardware:
 ---
 Made with ❤️ at TinkerHub Useless Projects 
 
-![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
+![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)zzaa
 ![Static Badge](https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0)
 
 
